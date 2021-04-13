@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css"
+import Button from 'react-bootstrap/Button'
+import Frase from './components/Frase'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="container d-flex flex-column align-items-center my-5">
+      <img src={process.env.PUBLIC_URL+"logo_720.png"} alt="logodelossimpson" className="w-75"/>
+      <Button variant="warning" className="my-5 w-75">Obtener frase</Button>
+<Frase></Frase>
+    </section>
   );
 }
-
 export default App;
